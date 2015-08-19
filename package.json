@@ -1,0 +1,17 @@
+{
+  "name": "demo_invoice",
+  "version": "1.0.0",
+  "description": "Invoice demo app using AngularJS",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  },
+  "author": "Chris Hilleren",
+  "dependencies": {
+    "http-server": "^0.8.0"
+  }
+}
