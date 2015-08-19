@@ -12,3 +12,9 @@ directives.directive('address', function() {
     templateUrl: "js/partials/address.html"
   }
 });
+
+directives.directive('invoiceData', function() {
+  return {
+    templateUrl: "js/partials/invoice-data.html"
+  }
+});

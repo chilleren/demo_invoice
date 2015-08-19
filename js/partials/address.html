@@ -1,8 +1,9 @@
-<div ng-model="address">
+<div ng-controller="AddressCtrl" ng-model="address">
   <input type="text" ng-model="address.companyName" placeholder="Company Name">
   <input type="text" ng-model="address.street" placeholder="Street Address">
   <input type="text" ng-model="address.city" placeholder="City">
   <input type="text" ng-model="address.state" placeholder="State">
   <input type="text" ng-model="address.zip" placeholder="Zip Code">
-  {{address.street}}
+  <br />
+  {{address}}
 </div>
