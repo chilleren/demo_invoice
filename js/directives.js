@@ -18,3 +18,9 @@ directives.directive('invoiceData', function() {
     templateUrl: "js/partials/invoice-data.html"
   }
 });
+
+directives.directive('lineItemList', function() {
+  return {
+    templateUrl: "js/partials/line-item-list.html"
+  }
+});
