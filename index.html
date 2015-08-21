@@ -33,10 +33,15 @@
           <div invoice-data></div>
           {{test}}
 
-          <div ng-controller="LineItemListCtrl">
+          <div>
             <div line-item-list></div>
             <button ng-click="addLineItem()">Add</button>
           </div>
+
+          <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
+          <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
+          <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
+          <div ng-model="total()">{{total() | currency}}</div>
         </div>
       </div>  
     </div>
