@@ -9,3 +9,7 @@ td {
 td, table, tr {
   border: 1px solid black;
 }
+
+.highlight {
+  border: 2px solid blue;
+}

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
 
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
@@ -25,23 +26,29 @@
     <div class="row">
       <div class="col-md-12">
         <div ng-controller="InvoiceCtrl">
-          <p>From Address:</p>
-          <div address></div>
+          <div ng-click="highlight()">
+            <p>From Address:</p>
+            <div address></div>
+          </div>
 
-          <p>To Address:</p>
-          <div address></div>
-          <div invoice-data></div>
-          {{test}}
+          <div ng-click="highlight()">
+            <p>To Address:</p>
+            <div address></div>
+          </div>
 
-          <div>
+          <div invoice-data ng-click="highlight()"></div>
+
+          <div ng-click="highlight()">
             <div line-item-list></div>
             <button ng-click="addLineItem()">Add</button>
           </div>
 
-          <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
-          <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
-          <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
-          <div ng-model="total()">{{total() | currency}}</div>
+          <div ng-click="highlight()">
+            <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
+            <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
+            <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
+            <div>{{total() | currency}}</div>
+          </div>
         </div>
       </div>  
     </div>

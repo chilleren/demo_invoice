@@ -52,6 +52,11 @@ controllers.controller('InvoiceCtrl', ['$scope', function($scope) {
 
     return $scope.subtotal + taxTotal - discountTotal;
   }
+
+  $scope.highlight = function () {
+    $(".highlight").removeClass("highlight");
+    $(event.currentTarget).addClass("highlight");
+  }
 }]);
 
 controllers.controller('AddressCtrl', ['$scope', function($scope) {
