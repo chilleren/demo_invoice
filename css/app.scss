@@ -1,0 +1,27 @@
+.navbar {
+  border-radius: 0;
+}
+
+td {
+  padding: 10px;
+}
+
+td, table, tr {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  .header {
+    background-color: blue;
+    color: white;
+  }
+}
+
+.highlight {
+  border: 2px solid blue;
+}
+
+.address-form {
+
+}

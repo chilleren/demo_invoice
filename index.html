@@ -24,30 +24,36 @@
 </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-10 col-md-offset-1">
         <div ng-controller="InvoiceCtrl">
-          <div ng-click="highlight()">
+          <h1 class="pull-right">Invoice</h1>
+
+          <div ng-click="highlight()" class="address-form">
             <p>From Address:</p>
             <div address></div>
           </div>
 
-          <div ng-click="highlight()">
+          <div ng-click="highlight()" class="address-form">
             <p>To Address:</p>
             <div address></div>
           </div>
 
-          <div invoice-data ng-click="highlight()"></div>
+          <div>
+            <div invoice-data ng-click="highlight()" class="pull-right"></div>
+          </div>
 
-          <div ng-click="highlight()">
-            <div line-item-list></div>
+          <div>
+            <div line-item-list ng-click="highlight()"></div>
             <button ng-click="addLineItem()">Add</button>
           </div>
 
-          <div ng-click="highlight()">
-            <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
-            <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
-            <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
-            <div>{{total() | currency}}</div>
+          <div>
+            <div ng-click="highlight()" class="pull-right">
+              <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
+              <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
+              <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
+              <div>{{total() | currency}}</div>
+            </div>
           </div>
         </div>
       </div>  
