@@ -28,15 +28,9 @@
         <div ng-controller="InvoiceCtrl">
           <h1 class="pull-right">Invoice</h1>
 
-          <div ng-click="highlight()" class="address-form">
-            <p>From Address:</p>
-            <div address></div>
-          </div>
+          <address text="Bill From:"></address>
 
-          <div ng-click="highlight()" class="address-form">
-            <p>To Address:</p>
-            <div address></div>
-          </div>
+          <address text="Bill To:"></address>
 
           <div>
             <div invoice-data ng-click="highlight()" class="pull-right"></div>
