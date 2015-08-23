@@ -3,6 +3,7 @@
 /* App Module */
 
 var invoiceApp = angular.module('invoiceApp', [
-  'controllers',
+  'controllers.invoice',
+  'controllers.address',
   'directives'
 ]);

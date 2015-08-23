@@ -1,17 +1,8 @@
 'use strict';
 
-/* Controllers */
+angular.module('controllers.invoice', [])
 
-  $(document).on("click", function (ev) {
-    if (!$(ev.target).closest('.highlight').length) {
-      $(".highlight").removeClass("highlight");
-    }
-  });
-
-
-var controllers = angular.module('controllers', []);
-
-controllers.controller('InvoiceCtrl', ['$scope', function($scope) {
+.controller('InvoiceCtrl', ['$scope', function($scope) {
 
   $scope.invoiceNumber = 10001;
   $scope.invoiceDate = new Date();
@@ -65,34 +56,4 @@ controllers.controller('InvoiceCtrl', ['$scope', function($scope) {
     $(".highlight").removeClass("highlight");
     $(event.currentTarget).addClass("highlight");
   }
-}]);
-
-controllers.controller('AddressCtrl', ['$scope', function($scope) {
-  $scope.address = {
-    // companyName: '',
-    // street: '',
-    // city: '',
-    // state: '',
-    // zip: ''
-  }
-
-  $scope.focusAddress = function () {
-    $(".highlight").removeClass("highlight");
-    $(event.currentTarget).addClass("highlight");
-  }
-
-
-  // $(document).on("click", function (ev) {
-  //   if (!$(ev.target).closest('.highlight').length) {
-  //     var highlights = $(".highlight");
-  //     if (highlights) {
-  //       highlights.removeClass("highlight");
-  //       ev.stopPropagation();
-  //     }
-  //   }
-  // });
-
-}]);
-
-controllers.controller('LineItemListCtrl', ['$scope', function($scope) {
 }]);
