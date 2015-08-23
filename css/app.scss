@@ -19,9 +19,23 @@ table {
 }
 
 .highlight {
-  border: 2px solid blue;
+  background: gray;
 }
 
 .address-form {
-
+  margin: 20px;
+  padding: 10px;
+  width: 320px;
+  .full-width {
+    width: 290px;
+  }
+  .city {
+    width: 140px;
+  }
+  .state {
+    width: 50px;
+  }
+  .zip {
+    width: 90px;
+  }
 }

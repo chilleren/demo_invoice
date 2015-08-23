@@ -14,6 +14,19 @@ table {
     color: white; }
 
 .highlight {
-  border: 2px solid blue; }
+  background: gray; }
+
+.address-form {
+  margin: 20px;
+  padding: 10px;
+  width: 320px; }
+  .address-form .full-width {
+    width: 290px; }
+  .address-form .city {
+    width: 140px; }
+  .address-form .state {
+    width: 50px; }
+  .address-form .zip {
+    width: 90px; }
 
 /*# sourceMappingURL=app.css.map */
