@@ -8,6 +8,7 @@
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers/invoice-ctrl.js"></script>
   <script src="js/controllers/address-ctrl.js"></script>
@@ -27,19 +28,22 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div ng-controller="InvoiceCtrl">
-          <h1 class="pull-right">Invoice</h1>
+          <div>
+            <h1 class="pull-right" ng-model="invoiceNumber">Invoice {{invoiceNumber}}</h1>
 
-          <address text="Bill From:"></address>
+            <address text="Bill From:"></address>
+          </div>
 
-          <address text="Bill To:"></address>
+
 
           <div>
-            <div invoice-data ng-click="highlight()" class="pull-right"></div>
+            <address class="pull-left" text="Bill To:"></address>
+            <div invoice-data class="pull-right"></div>
           </div>
 
           <div>
-            <div line-item-list ng-click="highlight()"></div>
-            <button ng-click="addLineItem()">Add</button>
+            <div class="clearfix" line-item-list></div>
+            <button ng-click="addLineItem()" class="btn btn-success">[+] Add</button>
           </div>
 
           <div>

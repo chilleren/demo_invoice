@@ -1,11 +1,17 @@
-<div>
-  <div>
-    Invoice Number: {{invoiceNumber}}
+<div id="invoice-data" class="clearfix">
+  <div class="clearfix invoice-number-input">
+    <div class="pull-left">Invoice Number:</div> 
+    <div class="pull-right">
+      <input type="text" ng-model="invoiceNumber" class="text-right">
+    </div>
   </div>
-  <div>
-    Invoice Date: {{invoiceDate | date}}
+  <div class="clearfix">
+    <div class="pull-left">Invoice Date:</div>
+    <div class="pull-right">{{invoiceDate | date}}</div>
   </div>
-  <div>
-    Invoice Total: {{total() | currency}}
+  <div class="clearfix">
+    <div class="pull-left"><strong>Invoice Total:</strong></div> 
+    <div class="pull-right"><strong>{{total() | currency}}</strong></div>
   </div>
+  <br>
 </div>
