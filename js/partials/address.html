@@ -1,13 +1,13 @@
 <div ng-controller="AddressCtrl" ng-model="address"  ng-click="focusAddress()" class="address-form">
-  <div>{{text}}</div>
+  <div><strong>{{text}}</strong></div>
   <div class="form-group">
-    <input title="Can't be blank" type="text" ng-model="address.companyName" placeholder="Company Name" class="full-width" ng-blur="blurInput()" data-placement="right">
+    <input title="Can't be blank" type="text" ng-model="address.companyName" placeholder="Company Name" class="full-width" ng-blur="blurInput()" data-placement="left">
   </div>
   <div class="form-group">
-    <input title="Can't be blank" type="text" ng-model="address.street" placeholder="Street Address" class="full-width" ng-blur="blurInput()" data-placement="right">
+    <input title="Can't be blank" type="text" ng-model="address.street" placeholder="Street Address" class="full-width" ng-blur="blurInput()" data-placement="left">
   </div>
   <div class="form-group">
-    <input title="Can't be blank" type="text" ng-model="address.city" placeholder="City" class="city" ng-blur="blurInput()" data-placement="bottom">
+    <input title="Can't be blank" type="text" ng-model="address.city" placeholder="City" class="city" ng-blur="blurInput()" data-placement="left">
     <input title="Can't be blank" type="text" ng-model="address.state" placeholder="State" class="state" ng-blur="blurInput()" data-placement="bottom">
     <input title="Can't be blank" type="text" ng-model="address.zip" placeholder="Zip Code" class="zip" ng-blur="blurInput()" data-placement="right">
   </div>

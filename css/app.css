@@ -29,13 +29,14 @@ button {
   background: lightgray; }
 
 .address-form {
-  margin: 20px;
+  border-radius: 6px;
+  margin: 20px 20px 20px 0;
   padding: 10px;
-  width: 320px; }
+  width: 280px; }
   .address-form .full-width {
-    width: 290px; }
+    width: 250px; }
   .address-form .city {
-    width: 140px; }
+    width: 103px; }
   .address-form .state {
     width: 50px; }
   .address-form .zip {
