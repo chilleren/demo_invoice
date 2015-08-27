@@ -46,13 +46,7 @@
             <button ng-click="addLineItem()" class="btn btn-success">[+] Add</button>
           </div>
 
-          <div>
-            <div ng-click="highlight()" class="pull-right">
-              <div ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
-              <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
-              <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
-              <div>{{total() | currency}}</div>
-            </div>
+          <div invoice-total>
           </div>
         </div>
       </div>  

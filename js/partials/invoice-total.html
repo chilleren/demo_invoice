@@ -1,0 +1,6 @@
+<div ng-click="highlight()" class="pull-right">
+  <div class="subtotal" ng-model="subtotal">Subtotal: {{subtotal | currency}}</div>
+  <div ng-repeat="tax in taxes">{{tax.type}} Tax: {{tax.rate * subtotal | currency}}</div>
+  <div ng-repeat="discount in discounts">Discount: {{discount | currency}}</div>
+  <div class="total">Total {{total() | currency}}</div>
+</div>

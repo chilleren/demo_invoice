@@ -20,6 +20,12 @@ directives.directive('invoiceData', function() {
   }
 });
 
+directives.directive('invoiceTotal', function() {
+  return {
+    templateUrl: "js/partials/invoice-total.html"
+  }
+});
+
 directives.directive('lineItemList', function() {
   return {
     templateUrl: "js/partials/line-item-list.html"

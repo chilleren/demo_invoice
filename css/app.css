@@ -28,6 +28,13 @@ button {
 .highlight {
   background: lightgray; }
 
+.subtotal {
+  font-weight: bold; }
+
+.total {
+  background-color: #666;
+  color: white; }
+
 .address-form {
   border-radius: 6px;
   margin: 20px 20px 20px 0;
