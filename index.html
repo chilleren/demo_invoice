@@ -19,22 +19,19 @@
 <div class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-brand">Invoice Creator</div>
-
-
       <p class="navbar-text navbar-right"><a href="#" class="navbar-link">By Chris Hilleren</a></p>
   </div>
 </div>
+
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div ng-controller="InvoiceCtrl">
+        <div ng-controller="InvoiceCtrl" class="clearfix" id="invoice-main">
+
           <div>
             <h1 class="pull-right" ng-model="invoiceNumber">Invoice {{invoiceNumber}}</h1>
-
             <address text="Bill From:"></address>
           </div>
-
-
 
           <div>
             <address class="pull-left" text="Bill To:"></address>
@@ -46,12 +43,11 @@
             <button ng-click="addLineItem()" class="btn btn-success">[+] Add</button>
           </div>
 
-          <div invoice-total>
-          </div>
-        </div>
-      </div>  
-    </div>
-  </div>
+          <div invoice-total></div>
 
+        </div> <!-- invoice controller -->
+      </div> <!-- col -->
+    </div> <!-- row -->
+  </div> <!-- container -->
 </body>
 </html>

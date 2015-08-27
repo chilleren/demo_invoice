@@ -1,6 +1,16 @@
 .navbar {
   border-radius: 0; }
 
+body {
+  background: #ddd; }
+
+#invoice-main {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  margin-bottom: 100px;
+  min-height: 11in; }
+
 td {
   padding: 10px; }
 
