@@ -35,6 +35,14 @@ button {
   #invoice-data .invoice-number-input {
     margin-bottom: 2px; }
 
+#invoice-total {
+  border: 1px solid #444;
+  padding: 20px; }
+  #invoice-total div {
+    margin-bottom: 5px; }
+  #invoice-total .pull-left {
+    margin-right: 50px; }
+
 .highlight {
   background: lightgray; }
 

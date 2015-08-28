@@ -1,3 +1,6 @@
+$borderGray: #444;
+$headerGray: #666;
+
 .navbar {
   border-radius: 0;
 }
@@ -19,13 +22,13 @@ td {
 }
 
 td, table, tr {
-  border: 1px solid #444;
+  border: 1px solid $borderGray;
 }
 
 table {
   width: 100%;
   .header {
-    background-color: #666;
+    background-color: $headerGray;
     color: white;
   }
 }
@@ -47,6 +50,19 @@ button {
   }
 }
 
+#invoice-total {
+  border: 1px solid $borderGray;
+  padding: 20px;
+  div {
+    margin-bottom: 5px;
+  }
+  .pull-left {
+    margin-right: 50px
+  }
+  div {
+  }
+}
+
 .highlight {
   background: lightgray;
 }
@@ -56,7 +72,7 @@ button {
 }
 
 .total {
-  background-color: #666;
+  background-color: $headerGray;
   color: white;
 }
 
