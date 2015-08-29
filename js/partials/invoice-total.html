@@ -9,10 +9,15 @@
   </div>
   <div class="clearfix" ng-repeat="discount in discounts">
     <div class="pull-left">Discount:</div>
-    <div class="pull-right">{{discount | currency}}</div>
+    <div class="pull-right">({{discount.amount | currency}})</div>
+    <button class="delete-discount hidden btn btn-danger btn-sm">Delete</button>
   </div>
   <div class="clearfix total">
     <div class="pull-left">Total:</div>
     <div class="pull-right">{{total() | currency}}</div>
   </div>
 </div>
+
+<a href ng-click="addTax()">[+] Add Tax</a>
+<br />
+<a href ng-click="addDiscount()">[+] Add Discount</a>

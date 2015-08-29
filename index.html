@@ -40,10 +40,16 @@
 
           <div>
             <div class="clearfix" line-item-list></div>
-            <button ng-click="addLineItem()" class="btn btn-success">[+] Add</button>
+            <a href ng-click="addLineItem()">[+] Add Line Item</a>
           </div>
 
-          <div invoice-total class="pull-right"></div>
+          <div class="clearfix" id="invoice-bottom">
+            <div class="pull-left">
+              <p><strong>Notes</strong></p>
+              <div ng-model="notes" contentEditable="true" class="notes">{{notes}}</div>
+            </div>
+            <div invoice-total class="pull-right"></div>
+          </div>
 
         </div> <!-- invoice controller -->
       </div> <!-- col -->

@@ -7,6 +7,7 @@ angular.module('controllers.invoice', [])
   $scope.invoiceNumber = 10001;
   $scope.invoiceDate = new Date();
   $scope.subtotal = 0;
+  $scope.notes = "Terms, conditions and notes for the client go here";
 
   $scope.lineItems = [
     {name: "Popcorn", description: "Genuine gourmet popping corn", quantity: 3, price: "9.99"},
@@ -18,7 +19,7 @@ angular.module('controllers.invoice', [])
     {type: "VAT", rate: .12}
   ];
 
-  $scope.discounts = [10, 5];
+  $scope.discounts = [{amount: 10}, {amount: 5}];
 
   function sumLineItems() {
     $scope.subtotal = 0;
@@ -37,6 +38,14 @@ angular.module('controllers.invoice', [])
     sumLineItems();
   }
 
+  $scope.addTax = function () {
+    $scope.taxes.push({type: "new tax", rate: 0.1});
+  }
+
+  $scope.addDiscount = function () {
+    $scope.discounts.push({amount: 10});
+  }
+
   $scope.total = function () {
     var taxTotal = 0;
     var discountTotal = 0;
@@ -46,7 +55,7 @@ angular.module('controllers.invoice', [])
     }
 
     for (var i = 0; i < $scope.discounts.length; i++) {
-      discountTotal += $scope.discounts[i];
+      discountTotal += $scope.discounts[i].amount;
     }
 
     return $scope.subtotal + taxTotal - discountTotal;
