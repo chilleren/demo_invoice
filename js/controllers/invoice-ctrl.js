@@ -56,11 +56,41 @@ angular.module('controllers.invoice', ['ui.bootstrap'])
   }
 
   $scope.addTax = function () {
-    $scope.taxes.push({type: "new tax", rate: 0.1});
+    $modal.open({
+      templateUrl: '/js/partials/modal-tax.html',
+      scope: $scope,
+      controller: function ($scope, $modalInstance) {
+        $scope.taxCopy = {type: "new tax", rate: 0.15};
+
+        $scope.save = function (taxCopy) {
+          $scope.taxes.push($scope.taxCopy)
+          $modalInstance.dismiss();
+        }
+
+        $scope.deleteTax = function () {
+          $modalInstance.dismiss();
+        }
+      }
+    });
   }
 
   $scope.addDiscount = function () {
-    $scope.discounts.push({amount: 10});
+    $modal.open({
+      templateUrl: '/js/partials/modal-discount.html',
+      scope: $scope,
+      controller: function ($scope, $modalInstance) {
+        $scope.discountCopy = {amount: 10};
+
+        $scope.save = function (discountCopy) {
+          $scope.discounts.push($scope.discountCopy);
+          $modalInstance.dismiss();
+        }
+
+        $scope.deleteDiscount = function () {
+          $modalInstance.dismiss();
+        }
+      }
+    });
   }
 
   $scope.total = function () {
