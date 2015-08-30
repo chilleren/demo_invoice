@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('controllers.invoice', [])
+angular.module('controllers.invoice', ['ui.bootstrap'])
 
-.controller('InvoiceCtrl', ['$scope', function($scope) {
+.controller('InvoiceCtrl', ['$scope', '$modal', function($scope, $modal) {
 
   $scope.invoiceNumber = 10001;
   $scope.invoiceDate = new Date();
@@ -37,9 +37,22 @@ angular.module('controllers.invoice', [])
   sumLineItems();
 
   $scope.addLineItem = function () {
-    $scope.lineItems.push(
-    {name: "New Item", description: "Details go here", quantity: 2, price: "10"});
-    sumLineItems();
+    $modal.open({
+      templateUrl: '/js/partials/modal-line-item.html',
+      scope: $scope,
+      controller: function ($scope, $modalInstance) {
+        $scope.lineItemCopy = {name: "New Item", description: "Details go here", quantity: 2, price: "10"};
+
+        $scope.save = function (lineItemCopy) {
+          $scope.lineItems.push($scope.lineItemCopy)
+          $modalInstance.dismiss();
+        }
+
+        $scope.deleteLine = function () {
+          $modalInstance.dismiss();
+        }
+      }
+    });
   }
 
   $scope.addTax = function () {

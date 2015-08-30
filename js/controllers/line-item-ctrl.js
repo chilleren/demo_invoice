@@ -16,7 +16,7 @@ angular.module('controllers.lineItem', ['ui.bootstrap'])
 
   $scope.editLineItem = function () {
     $modal.open({
-      templateUrl: 'js/partials/modal-line-item.html',
+      templateUrl: '/js/partials/modal-line-item.html',
       scope: $scope,
       controller: function ($scope, $modalInstance) {
         $scope.lineItemCopy = angular.copy($scope.lineItem);
@@ -30,11 +30,13 @@ angular.module('controllers.lineItem', ['ui.bootstrap'])
         }
 
         $scope.deleteLine = function () {
-          console.log('delete');
+          var indexToDelete = $scope.$parent.lineItems.indexOf($scope.lineItem);
+          if (indexToDelete !== -1) {
+            $scope.$parent.lineItems.splice(indexToDelete, 1);
+          }
         }
       }
     });
-
   }
 
 }]);
