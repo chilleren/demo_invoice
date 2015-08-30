@@ -10,8 +10,8 @@ angular.module('controllers.invoice', [])
   $scope.notes = "Terms, conditions and notes for the client go here";
 
   $scope.lineItems = [
-    {name: "Popcorn", description: "Genuine gourmet popping corn", quantity: 3, price: "9.99"},
-    {name: "Bags", description: "Large popcorn bags", quantity: 10, price: "3"}
+    {name: "Popcorn", description: "Genuine gourmet popping corn", quantity: 3, price: 9.99},
+    {name: "Bags", description: "Large popcorn bags", quantity: 10, price: 3.95}
   ];
 
   $scope.taxes = [
@@ -23,7 +23,7 @@ angular.module('controllers.invoice', [])
 
   $scope.$watch('lineItems', function () {
     sumLineItems();
-  }, true)
+  }, true);
 
   function sumLineItems() {
     $scope.subtotal = 0;
