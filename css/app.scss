@@ -67,6 +67,16 @@ button {
   margin-top: 30px;
 }
 
+.form-horizontal {
+  label {
+    margin-top: 5px;
+  }
+}
+
+.line-item-row {
+  cursor: pointer;
+}
+
 .notes {
   width: 500px;
   min-height: 100px;

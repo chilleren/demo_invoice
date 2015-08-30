@@ -21,6 +21,10 @@ angular.module('controllers.invoice', [])
 
   $scope.discounts = [{amount: 10}, {amount: 5}];
 
+  $scope.$watch('lineItems', function () {
+    sumLineItems();
+  }, true)
+
   function sumLineItems() {
     $scope.subtotal = 0;
 
