@@ -21,11 +21,14 @@ td {
   padding: 10px;
 }
 
-td, table, tr {
-  border: 1px solid $borderGray;
+.line-item-list{
+  td, table, tr {
+    border: 1px solid $borderGray;
+  }
 }
 
 table {
+  border: 1px solid $borderGray;
   width: 100%;
   .header {
     background-color: $headerGray;
@@ -52,19 +55,14 @@ button {
 
 #invoice-total {
   border: 1px solid $borderGray;
-  padding: 20px;
-  div {
-    margin-bottom: 5px;
-  }
-  .pull-left {
-    margin-right: 50px
-  }
-  div {
-  }
 }
 
 #invoice-bottom {
   margin-top: 30px;
+}
+
+tr {
+  border-bottom: 1px solid $borderGray;
 }
 
 .form-horizontal {
@@ -73,7 +71,11 @@ button {
   }
 }
 
-.line-item-row {
+.tax-rate {
+  color: $headerGray;
+}
+
+.line-item-row, .discount-row, .tax-row {
   cursor: pointer;
 }
 

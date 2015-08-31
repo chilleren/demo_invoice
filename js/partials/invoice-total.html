@@ -1,22 +1,22 @@
-<div id="invoice-total">
-  <div class="clearfix subtotal">
-    <div class="pull-left">Subtotal:</div>
-    <div class="pull-right" ng-model="subtotal">{{subtotal | currency}}</div>
-  </div>
-  <div class="clearfix" ng-repeat="tax in taxes">
-    <div class="pull-left">{{tax.type}} Tax:</div>
-    <div class="pull-right">{{tax.rate * subtotal | currency}}</div>
-  </div>
-  <div class="clearfix" ng-repeat="discount in discounts">
-    <div class="pull-left">Discount:</div>
-    <div class="pull-right">({{discount.amount | currency}})</div>
-    <button class="delete-discount hidden btn btn-danger btn-sm">Delete</button>
-  </div>
-  <div class="clearfix total">
-    <div class="pull-left">Total:</div>
-    <div class="pull-right">{{total() | currency}}</div>
-  </div>
-</div>
+<table id="invoice-total">
+  <tr class="subtotal">
+    <td>Subtotal:</td>
+    <td ng-model="subtotal" colspan="2" class="text-right">{{subtotal | currency}}</td>
+  </tr>
+  <tr class="tax-row" ng-repeat="tax in taxes" ng-controller="TaxCtrl" ng-mouseover="mouseOver()" ng-mouseout="mouseOut()" ng-click="edit()">
+    <td>{{tax.type}} Tax:</td>
+    <td class="text-right text-muted">({{tax.rate * 100 + "%"}})</td>
+    <td class="text-right">{{tax.rate * subtotal | currency}}</td>
+  </tr>
+  <tr class="discount-row" ng-repeat="discount in discounts" ng-controller="DiscountCtrl" ng-mouseover="mouseOver()" ng-mouseout="mouseOut()" ng-click="edit()">
+    <td>Discount:</td>
+    <td colspan="2" class="text-right">({{discount.amount | currency}})</td>
+  </tr>
+  <tr class="total">
+    <td>Total:</td>
+    <td colspan="2" class="text-right">{{total() | currency}}</td>
+  </tr>
+</table>
 
 <a href ng-click="addTax()">[+] Add Tax</a>
 <br />

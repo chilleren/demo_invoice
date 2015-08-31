@@ -6,6 +6,8 @@ var invoiceApp = angular.module('invoiceApp', [
   'controllers.invoice',
   'controllers.address',
   'controllers.lineItem',
+  'controllers.tax',
+  'controllers.discount',
   'directives'
 ]);
 

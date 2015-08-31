@@ -21,13 +21,13 @@ angular.module('controllers.invoice', ['ui.bootstrap'])
 
   $scope.discounts = [{amount: 10}, {amount: 5}];
 
+  //deep watch line items
   $scope.$watch('lineItems', function () {
     sumLineItems();
   }, true);
 
   function sumLineItems() {
     $scope.subtotal = 0;
-
     for (var i = 0; i < $scope.lineItems.length; i++) {
       var lineItem = $scope.lineItems[i];
       $scope.subtotal += lineItem.price * lineItem.quantity;
@@ -98,18 +98,14 @@ angular.module('controllers.invoice', ['ui.bootstrap'])
     var discountTotal = 0;
 
     for (var i = 0; i < $scope.taxes.length; i++) {
-      taxTotal += $scope.taxes[i].rate * $scope.subtotal;
+      taxTotal += +$scope.taxes[i].rate * +$scope.subtotal;
     }
 
     for (var i = 0; i < $scope.discounts.length; i++) {
-      discountTotal += $scope.discounts[i].amount;
+      discountTotal += +$scope.discounts[i].amount;
     }
 
     return $scope.subtotal + taxTotal - discountTotal;
   }
 
-  $scope.highlight = function () {
-    $(".highlight").removeClass("highlight");
-    $(event.currentTarget).addClass("highlight");
-  }
 }]);

@@ -3,13 +3,7 @@
 angular.module('controllers.address', [])
 
 .controller('AddressCtrl', ['$scope', function($scope) {
-  $scope.address = {
-    // companyName: '',
-    // street: '',
-    // city: '',
-    // state: '',
-    // zip: ''
-  }
+  $scope.address = {};
 
   $scope.focusAddress = function () {
     $(".highlight").removeClass("highlight");
@@ -25,16 +19,5 @@ angular.module('controllers.address', [])
       target.tooltip("hide");
     }
   }
-
-
-  // $(document).on("click", function (ev) {
-  //   if (!$(ev.target).closest('.highlight').length) {
-  //     var highlights = $(".highlight");
-  //     if (highlights) {
-  //       highlights.removeClass("highlight");
-  //       ev.stopPropagation();
-  //     }
-  //   }
-  // });
 
 }]);

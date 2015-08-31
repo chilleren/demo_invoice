@@ -24,8 +24,8 @@ angular.module('controllers.lineItem', ['ui.bootstrap'])
         $scope.save = function (lineItemCopy) {
           $scope.lineItem.name = lineItemCopy.name;
           $scope.lineItem.description = lineItemCopy.description;
-          $scope.lineItem.price = lineItemCopy.price;
-          $scope.lineItem.quantity = lineItemCopy.quantity;
+          $scope.lineItem.price = +lineItemCopy.price;
+          $scope.lineItem.quantity = +lineItemCopy.quantity;
           $modalInstance.dismiss();
         }
 
