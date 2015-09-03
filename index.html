@@ -30,7 +30,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div ng-controller="InvoiceCtrl" class="clearfix" id="invoice-main">
+        <div ng-controller="InvoiceCtrl" class="clearfix" id="invoice-main" ng-click="dismissHelp()">
+          
+          <div class="alert-holster">
+          <div class="alert alert-info text-center" style="display:none" role="alert">
+            <h1>Click things to edit them!</h1>
+          </div>
+          </div>
 
           <div>
             <h1 class="pull-right" ng-model="invoiceNumber">Invoice {{invoiceNumber}}</h1>
@@ -41,6 +47,7 @@
             <address class="pull-left" text="Bill To:"></address>
             <div invoice-data class="pull-right"></div>
           </div>
+
 
           <div>
             <div class="clearfix" line-item-list></div>

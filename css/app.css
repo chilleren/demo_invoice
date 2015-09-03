@@ -14,6 +14,19 @@ body {
 td {
   padding: 10px; }
 
+.alert-holster {
+  margin-top: 150px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+.alert {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  /* For IE8 and earlier */ }
+
 .line-item-list td, .line-item-list table, .line-item-list tr {
   border: 1px solid #444; }
 

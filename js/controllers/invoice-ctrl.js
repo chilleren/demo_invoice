@@ -4,6 +4,7 @@ angular.module('controllers.invoice', ['ui.bootstrap'])
 
 .controller('InvoiceCtrl', ['$scope', '$modal', function($scope, $modal) {
 
+  $scope.showHelp = true;
   $scope.invoiceNumber = 10001;
   $scope.invoiceDate = new Date();
   $scope.subtotal = 0;
@@ -92,6 +93,15 @@ angular.module('controllers.invoice', ['ui.bootstrap'])
       }
     });
   }
+
+  $scope.dismissHelp = function () {
+    $scope.showHelp = false;
+    if (!$scope.showHelp) {
+      $(".alert-info").slideUp();
+    }
+  }
+
+  $(".alert-info").slideDown();
 
   $scope.total = function () {
     var taxTotal = 0;
