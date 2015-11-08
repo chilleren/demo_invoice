@@ -6,13 +6,14 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {    
-    "postinstall": "bower install",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
     "test": "test",
     "start": "node server.js"
   },
   "author": "Chris Hilleren",
   "dependencies": {
+    "bower": "^1.6.5",
     "express": "^4.13.3",
     "http-server": "^0.8.0"
   }
