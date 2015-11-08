@@ -6,7 +6,8 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
+  "scripts": {    
+    "postinstall": "bower install",
     "test": "test",
     "start": "node server.js"
   },
