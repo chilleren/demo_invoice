@@ -8,10 +8,11 @@
   },
   "scripts": {
     "test": "test",
-    "start": "http-server -a 0.0.0.0 -p 8000"
+    "start": "node server.js"
   },
   "author": "Chris Hilleren",
   "dependencies": {
+    "express": "^4.13.3",
     "http-server": "^0.8.0"
   }
 }
